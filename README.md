@@ -18,6 +18,13 @@ It’s designed as a single-page app with no external dependencies—just drop t
 
 ---
 
+## 🚀 Demo
+
+Check out the live preview:  
+https://coffee-machine-preview.vercel.app/
+
+---
+
 ## 🛠️ Tech Stack
 
 - **HTML5** – semantic layout  
