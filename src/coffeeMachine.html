@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffee Machine</title>
+  <link rel="stylesheet" href="coffeeMachine.css">
+</head>
+<body>
+  <div class="kiosk">
+    <header>
+      <h1>☕ Coffee Maker</h1>
+    </header>
+    <main>
+      <section class="status-panel">
+        <h2>Inventory</h2>
+        <ul>
+          <li>Water: <span id="water"></span> ml</li>
+          <li>Milk: <span id="milk"></span> ml</li>
+          <li>Beans: <span id="beans"></span> g</li>
+          <li>Cups: <span id="cups"></span></li>
+          <li>Sugar: <span id="sugar"></span> tbsp</li>
+          <li>Vanilla Syrup: <span id="syrup-vanilla"></span> shots</li>
+          <li>Caramel Syrup: <span id="syrup-caramel"></span> shots</li>
+          <li>Money: $<span id="money"></span></li>
+        </ul>
+      </section>
+
+      <section class="control-panel">
+        <div class="buttons">
+          <button onclick="showAction('buy')">Buy Coffee</button>
+          <button onclick="showAction('fill')">Refill Supplies</button>
+          <button onclick="take()">Collect Cash</button>
+        </div>
+        <div id="action-area" class="action-area"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="coffeeMachine.js"></script>
+</body>
+</html>

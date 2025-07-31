@@ -1,0 +1,169 @@
+/* Reset basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page background & centering */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Kiosk container */
+.kiosk {
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 900px;
+  max-width: 95%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Header */
+header {
+  background: #444;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 2rem;
+}
+
+/* Main layout: inventory + controls */
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Inventory panel */
+.status-panel {
+  background: #2a2a2a;
+  padding: 20px;
+}
+.status-panel h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #555;
+  padding-bottom: 5px;
+}
+.status-panel ul {
+  list-style: none;
+  margin-top: 15px;
+}
+.status-panel li {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+/* Control panel */
+.control-panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top buttons */
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.buttons button {
+  flex: 1;
+  margin: 0 10px;
+  padding: 15px;
+  font-size: 1.1rem;
+  background: #ff8c00;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.buttons button:hover {
+  background: #ffa533;
+}
+
+/* Action area */
+.action-area {
+  background: #1f1f1f;
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+/* Headings inside action area */
+.action-area h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Form labels */
+.action-area form label {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Number inputs */
+.action-area input[type="number"] {
+  width: 80px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+/* Action buttons */
+.action-area button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #28a745;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.action-area button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+.action-area button:hover:not(:disabled) {
+  background: #3dcb6d;
+}
+
+/* Center the refill container under Fill button */
+.refill-container {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(2, 1fr); /* three fields per row; use repeat(4, 1fr) for four */
+  gap: 12px;
+  margin: 0;
+  width: 100%;
+}
+
+/* Each grid cell stacks label above input */
+.refill-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Label styling */
+.refill-container > div label {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Input full width of cell */
+.refill-container > div input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
